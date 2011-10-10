@@ -95,10 +95,10 @@
       </div>
 
       <div class="list inline">
-        <h3>Recent photo</h3>
+        <h3>Recent photos</h3>
         <ul class="photos"> 
 		<c:forEach items="${photos}" var="photo" varStatus="status">
-            <li style='background-image: url(<c:out value="${photo.tinyImage.source}"/>)' class='${((status.count - 1) % 4 == 0)?"first-column":""}'>
+            <li style='background-image: url(<c:out value="${photo.icon}"/>)' class='${((status.count - 1) % 4 == 0)?"first-column":""}'>
               <a href="#" onclick="window.open('http://www.facebook.com/<c:out value="${photo.id}"/>')">
                 <c:out value="${photo.name}"/>
               </a>
